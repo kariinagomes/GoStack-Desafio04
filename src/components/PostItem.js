@@ -7,25 +7,36 @@ function PostItem({ post }) {
     /** Post */
     <div className='post-item'>
       {/* header */}
-      <div className='post-header'>
-        <img className='avatar' src={post.author.avatar} />
-        <div className='details'>
-          <span className='author'>{post.author.name}</span>
-          <span>{post.date}</span> 
-        </div>
-      </div>
+      <PostHeader author={post.author} date={post.date} /> 
       {/* content */}
       <div className='post-content'> 
         <span>{post.content}</span>
       </div>
       {/* comments */}
-      <div className='post-comments'>
-        <div className='divider-comments'>
-          {post.comments.map(comment =>(
-            <PostComment key={comment.id} comment={comment} />
-          ))}
-        </div>
+      <Comment post={post} />
+    </div>
+  );
+}
+
+function PostHeader({ author, date }) {
+  return (
+    <div className='post-header'>
+      <img className='avatar' src={author.avatar} />
+      <div className='details'>
+        <span className='author'>{author.name}</span>
+        <span>{date}</span> 
       </div>
+    </div>
+  );
+}
+
+function Comment({post}) {
+  return (
+    <div className='post-comments'>
+      <div className='divider-comments' />
+        {post.comments.map(comment =>(
+          <PostComment key={comment.id} comment={comment} />
+        ))}
     </div>
   );
 }

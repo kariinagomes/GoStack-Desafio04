@@ -1,8 +1,21 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
 body {
   background: #F2F2F2;
-  margin: 0;
+  /* margin: 0; */
   font-family: Arial, Helvetica, sans-serif; 
 }
 
@@ -45,22 +58,7 @@ header .header-content i {
   border-radius: 50%;
 }
 
-.container {
-  margin-top: 20px;
-  border-radius: 8px;
-  background: white;
-  padding: 20px;
-  color: #3e3e3e;
-  line-height: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.post-list {
-  width: 800px;
-  margin: 0 auto 20px;
-}
-
-/* .post-item {
+/* .container {
   margin-top: 20px;
   border-radius: 8px;
   background: white;
@@ -69,6 +67,21 @@ header .header-content i {
   line-height: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 } */
+
+.post-list {
+  width: 800px;
+  margin: 0 auto 20px;
+}
+
+.post-item {
+  margin-top: 20px;
+  border-radius: 8px;
+  background: white;
+  padding: 20px;
+  color: #3e3e3e;
+  line-height: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
 .post-header {
   display: flex;

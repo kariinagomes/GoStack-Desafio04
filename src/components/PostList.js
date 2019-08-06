@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import PostItem from './PostItem';
 import fotoPerfil from '../assets/foto-perfil.png';
+import fotoDiego from '../assets/foto-diego.png';
 
 class PostList extends Component {
    /**
@@ -23,36 +24,36 @@ class PostList extends Component {
             id: 1,
             author: {
               name: 'Diego Fernandes',
-              avatar: fotoPerfil
+              avatar: fotoDiego
             },
             content: "A Rocketseat está sempre em busca de novos membros para o time, e geralmente ficamos d eolho em quem se destaca no Bootcamp, inclusive 80% do nosso time de devs é composto por alunos do Bootcamp. Além disso, se você tem vontade de ensinar gravando vídeos e criando posts, pode me chamar no Discord! (Sério, me chamem mesmo, esse comentário é real)"
           },
           {
             id: 2,
             author: {
-              name: 'Diego Fernandes',
+              name: 'Karina Gomes',
               avatar: fotoPerfil
             },
-            content: "Opa! Olha a resposta do Diego! Ótima oportunidade para se destacar"
+            content: "Opa! Obrigada Diego."
           }
         ],
       },
       {
         id: 2,
         author: {
-          name: '[Nome do usuário]',
-          avatar: ''
+          name: 'Karina Gomes',
+          avatar: fotoPerfil
         },
-        date: '[Data]',
-        content: '[Post]',
+        date: '03 Jun 2019',
+        content: 'O bootcamp está muito massa!!',
         comments: [
           {
             id: 2,
             author: {
-              name: '[Nome do usuário]',
-              avatar: ''
+              name: 'Diego Fernandes',
+              avatar: fotoDiego
             },
-            content: "Conteúdo do comentário"
+            content: "Está mesmo! E acabou de sair vídeo novo."
           }
         ],
       }
@@ -63,9 +64,7 @@ class PostList extends Component {
     return (
       <div className='post-list'>
        {this.state.posts.map(post =>(
-         <div className='container'>
           <PostItem key={post.id} post={post}/>
-         </div>
        ))}
       </div>
     );
